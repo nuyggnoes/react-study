@@ -1,7 +1,7 @@
 import Movie from "../components/Movie";
 import { useState, useEffect } from "react";
 
-function Home() {
+export default function Home() {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
   const getMovies = async () => {
@@ -34,4 +34,3 @@ function Home() {
     </div>
   );
 }
-export default Home;
