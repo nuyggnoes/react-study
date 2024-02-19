@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
 import Home from "./routes/Home";
@@ -48,11 +48,17 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
+const Wrapper = styled.div`
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+`;
+
 export default function App() {
   return (
-    <>
+    <Wrapper>
       <GlobalStyles />
       <RouterProvider router={router} />
-    </>
+    </Wrapper>
   );
 }
