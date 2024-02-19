@@ -1,21 +1,12 @@
-import { NavLink } from "react-router-dom";
-import "../styles/common/nav.css";
-function Navigator() {
+import { Link } from "react-router-dom";
+import classes from "../styles/MainNavigation.module.css";
+export default function Navigator() {
   return (
-    <nav className="navigation">
-      <div>
-        <NavLink to="/">Home</NavLink>
-      </div>
-      <div>
-        <NavLink to="/recommend">Recommend</NavLink>
-      </div>
-      <div>
-        <NavLink to="/search">Search</NavLink>
-      </div>
-      <div>
-        <NavLink to="/mypage">MyPage</NavLink>
-      </div>
-    </nav>
+    <div>
+      <Link to="/" className={({ isActive }) => (isActive ? classes.menu : undefined)}>
+        Home
+      </Link>
+      <Link to="/profile">profile</Link>
+    </div>
   );
 }
-export default Navigator;
