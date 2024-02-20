@@ -1,5 +1,4 @@
 import { Link, Outlet } from "react-router-dom";
-import Navigator from "./Navigator";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
