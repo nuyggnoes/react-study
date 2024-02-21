@@ -8,6 +8,7 @@ import RootLayout from "./components/Root";
 import ErrorPage from "./pages/ErrorPage";
 import Login from "./routes/Login";
 import NewUser from "./routes/NewUser";
+import Navigator from "./components/Navigator";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
+      {
+        path: "nav",
+        element: <Navigator />,
+      },
       {
         path: "",
         element: <Home />,
@@ -49,7 +54,7 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 const Wrapper = styled.div`
-  height: 100vh;
+  height: 1000vh;
   display: flex;
   justify-content: center;
 `;
