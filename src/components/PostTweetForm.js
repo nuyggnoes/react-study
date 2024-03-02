@@ -9,6 +9,7 @@ const Form = styled.form`
 
 const TextArea = styled.textarea`
   border: 2px solid white;
+  font-weight: 600;
   padding: 20px;
   border-radius: 20px;
   font-size: 16px;
